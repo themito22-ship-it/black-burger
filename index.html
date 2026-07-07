@@ -155,11 +155,11 @@ header.scrolled{background:rgba(22,19,17,0.85); backdrop-filter:blur(10px); bord
 
 .hero-visual{position:relative; display:flex; align-items:center; justify-content:center;}
 .hero-plate{
-  position:relative; width:100%; max-width:480px; border-radius:50%; overflow:hidden; aspect-ratio:1/1;
+  position:relative; width:100%; max-width:480px; border-radius:50%; aspect-ratio:1/1;
   box-shadow:0 40px 90px -20px rgba(0,0,0,.7), 0 0 0 10px var(--char-2), 0 0 0 12px var(--line);
   animation:float 5s ease-in-out infinite;
 }
-.hero-plate img{width:100%; height:100%; object-fit:cover;}
+.hero-plate-inner{position:absolute; inset:0; border-radius:50%; overflow:hidden;} .hero-plate-inner img{width:100%; height:100%; object-fit:cover;}
 @keyframes float{0%,100%{transform:translateY(0px);} 50%{transform:translateY(-14px);}}
 .live-badge{
   position:absolute; bottom:10px; left:50%; transform:translateX(-50%);
@@ -468,7 +468,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--ember); outline-of
 
       <div class="hero-visual">
         <div class="hero-plate">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=900&auto=format&fit=crop" alt="Hambúrguer artesanal Black Burger com queijo derretido">
+          <div class="hero-plate-inner"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=900&auto=format&fit=crop" alt="Hambúrguer artesanal Black Burger com queijo derretido"></div>
           <div class="live-badge"><span class="live-dot"></span> <span id="liveCounter">7</span> burgers no fogo agora</div>
         </div>
       </div>
